@@ -1,0 +1,18 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=BengalBoot Installer
+GenericName=Installer for BengalBoot
+X-GNOME-FullName=BengalBoot Installer
+Comment=Install the BengalBoot to disk
+TryExec=calamares
+Exec=sh -c "pkexec calamares"
+Icon=bengal-installer
+Terminal=false
+SingleMainWindow=true
+StartupNotify=true
+Categories=F;System;Settings;
+X-AppStream-Ignore=true
+Keywords=bengal;system;installer;
+X-AppStream-Ignore=true
