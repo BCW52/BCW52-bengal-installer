@@ -23,8 +23,8 @@ welcomeExpandingLogo:   true
 # Size and expansion policy for Calamares.
 #  - "normal" or unset, expand as needed, use *windowSize*
 #  - "fullscreen", start as large as possible, ignore *windowSize*
-#  - "noexpand", never expand, use *windowSize*
-windowExpanding:    noexpand
+#  - "noexpand", don't expand automatically, use *windowSize*
+windowExpanding:    normal
 
 # Size of Calamares window, expressed as w,h. Both w and h
 # may be either pixels (suffix px) or font-units (suffix em).
@@ -33,7 +33,7 @@ windowExpanding:    noexpand
 # This setting is ignored if "fullscreen" is selected for
 # *windowExpanding*, above. If not set, use constants defined
 # in CalamaresUtilsGui, 800x520.
-windowSize: 820px,540px
+windowSize: 50em,32m
 
 # Placement of Calamares window. Either "center" or "free".
 # Whether "center" actually works does depend on the window
@@ -63,7 +63,7 @@ windowPlacement: center
 # to putting the sidebar on the left. Also valid is "qml,top".
 # While "widget,top" is valid, the widgets code is **not** flexible
 # and results will be terrible.
-sidebar: widget
+sidebar: qml
 
 # Kind of navigation (button panel on the bottom).
 #  - "widget" or unset, use traditional navigation
@@ -143,6 +143,7 @@ strings:
 # These filenames can also use substitutions from os-release (see above).
 images:
     productBanner:       "banner.png"
+    productLogo:         "squid.png"
     productIcon:         "squid.png"
     productWelcome:      "languages.png"
 
@@ -161,13 +162,13 @@ images:
 #   sidebarBackground:    "#292F34"
 #   sidebarText:          "#00ff00"
 #   sidebarTextSelect:    "#3cb371"
-#   sidebarTextHighlight: "#D35400"
+#   sidebarTextHighlight: "#f5f6f7"
 
 style:
-   sidebarBackground:    "#454948"
+   sidebarBackground:    "#1e344a"
    sidebarText:          "#efefef"
-   sidebarTextSelect:    "#4d915e"
-   sidebarTextHighlight: "#f5f6f7"
+   sidebarTextSelect:    "#21bf48"
+   sidebarTextHighlight: "#3d3d3d"
 
 ### SLIDESHOW
 #
@@ -200,5 +201,5 @@ slideshow:               "show.qml"
 #      the QML components).
 #
 # An image slideshow does not need to have the API defined.
-slideshowAPI: 1
+slideshowAPI: 2
 
