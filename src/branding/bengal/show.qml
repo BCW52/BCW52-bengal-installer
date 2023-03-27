@@ -35,7 +35,7 @@ Presentation
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
         Image {
-            id: background1
+            id: background2
             source: "Feature-1.png"
             width: parent.width; height: parent.height
             verticalAlignment: Image.AlignTop
@@ -48,7 +48,7 @@ Presentation
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
         Image {
-            id: background1
+            id: background3
             source: "Feature-2.png"
             width: parent.width; height: parent.height
             verticalAlignment: Image.AlignTop
@@ -62,7 +62,7 @@ Presentation
         anchors.fill: parent
         anchors.verticalCenterOffset: 0
         Image {
-            id: background1
+            id: background4
             source: "conclusion.png"
             width: parent.width; height: parent.height
             verticalAlignment: Image.AlignTop

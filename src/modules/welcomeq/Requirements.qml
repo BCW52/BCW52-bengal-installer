@@ -92,16 +92,11 @@ Rectangle {
             id: requirementsList
             anchors.fill: parent
             spacing: 5
-            clip: true
-            // This uses the unfiltered model, so that all requirements are
-            // shown. You could use *unsatisfiedRequirements* to get the
-            // filtered model so that only unsatisfied requirements are ever shown.
-            //model: config.unsatisfiedRequirements
-            model: config.requirementsModel
+            // This uses the filtered model, so that only unsatisfied
+            // requirements are ever shown. You could use *requirementsModel*
+            // to get all of them.
+            model: config.unsatisfiedRequirements
             delegate: requirementsDelegate
-            ScrollBar.vertical: ScrollBar {
-                active: true
-            }
         }
     }
 }
