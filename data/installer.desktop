@@ -16,3 +16,5 @@ Categories=F;System;Settings;
 X-AppStream-Ignore=true
 Keywords=bengal;system;installer;
 X-AppStream-Ignore=true
+Type=Application
+Categories=Qt;System;

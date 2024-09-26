@@ -13,6 +13,9 @@
 
 #include <memory>
 
+namespace
+{
+
 struct TranslationSpecialCase
 {
     const char* id;  // The Calamares ID for the translation
@@ -84,6 +87,21 @@ static constexpr const TranslationSpecialCase special_cases[] = {
       QLocale::Script::AnyScript,
       QLocale::Country::AnyCountry,
       "Lenga d'òc" },
+    // Luri
+    { "bqi",
+      nullptr,
+      QLocale::Language::NorthernLuri,
+      QLocale::Script::AnyScript,
+      QLocale::Country::AnyCountry,
+      nullptr },
+    // Interlingue is mapped to interlingu*a* (up until Qt version ...) because
+    //   the real Language::Interlingue acts like C locale.
+    { "ie",
+      nullptr,
+      CALAMARES_QT_SUPPORT_INTERLINGUE ? QLocale::Language::Interlingue : QLocale::Language::Interlingua,
+      QLocale::Script::AnyScript,
+      QLocale::Country::AnyCountry,
+      "Interlingue" },
 };
 
 static inline bool
@@ -127,8 +145,9 @@ specialCaseSystemLanguage()
                         { return ( s.language == language ) && lookup_region( region, s.regions ); } );
     return ( it != std::cend( special_cases ) ) ? QString::fromLatin1( it->id ) : QString();
 }
+}  // namespace
 
-namespace CalamaresUtils
+namespace Calamares
 {
 namespace Locale
 {
@@ -187,4 +206,4 @@ Translation::getLocale( const Id& localeId )
 }
 
 }  // namespace Locale
-}  // namespace CalamaresUtils
+}  // namespace Calamares

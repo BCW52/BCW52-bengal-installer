@@ -24,7 +24,7 @@ welcomeExpandingLogo:   true
 #  - "normal" or unset, expand as needed, use *windowSize*
 #  - "fullscreen", start as large as possible, ignore *windowSize*
 #  - "noexpand", don't expand automatically, use *windowSize*
-windowExpanding:    noexpand
+windowExpanding:    normal
 
 # Size of Calamares window, expressed as w,h. Both w and h
 # may be either pixels (suffix px) or font-units (suffix em).
@@ -33,7 +33,7 @@ windowExpanding:    noexpand
 # This setting is ignored if "fullscreen" is selected for
 # *windowExpanding*, above. If not set, use constants defined
 # in CalamaresUtilsGui, 800x520.
-windowSize: 50em,32m
+windowSize: 50em,32em
 
 # Placement of Calamares window. Either "center" or "free".
 # Whether "center" actually works does depend on the window
@@ -108,8 +108,8 @@ navigation: widget
 strings:
     productName:         BengalBoot
     shortProductName:    BengalBoot
-    version:             1.1
-    shortVersion:        1.1
+    version:             3.0
+    shortVersion:        3.0
     versionedName:       BengalBoot
     shortVersionedName:  BengalBoot
     bootloaderEntryName: BengalBoot
@@ -143,17 +143,17 @@ strings:
 # These filenames can also use substitutions from os-release (see above).
 images:
     productBanner:       "banner.png"
-    productLogo:         "squid.png"
-    productIcon:         "squid.png"
+    productLogo:         "bengal-installer.svg"
+    productIcon:         "bengal-installer.svg"
     productWelcome:      "languages.png"
 
 # Colors for text and background components.
 #
-#  - sidebarBackground is the background of the sidebar
-#  - sidebarText is the (foreground) text color
-#  - sidebarTextHighlight sets the background of the selected (current) step.
+#  - SidebarBackground is the background of the sidebar
+#  - SidebarText is the (foreground) text color
+#  - SidebarBackgroundCurrent sets the background of the current step.
 #    Optional, and defaults to the application palette.
-#  - sidebarSelect is the text color of the selected step.
+#  - SidebarTextCurrent is the text color of the current step.
 #
 # These colors can **also** be set through the stylesheet, if the
 # branding component also ships a stylesheet.qss. Then they are
@@ -165,11 +165,10 @@ images:
 #   sidebarTextHighlight: "#f5f6f7"
 
 style:
-   sidebarBackground:    "#1e344a"
-   sidebarText:          "#efefef"
-   sidebarTextSelect:    "#21bf48"
-   sidebarTextHighlight: "#3d3d3d"
-
+   SidebarBackground:    "#292F34"
+   SidebarText:          "#efefef"
+   SidebarTextCurrent:    "#21bf48"
+   SidebarBackgroundCurrent: "#424c54"
 ### SLIDESHOW
 #
 # The slideshow is displayed during execution steps (e.g. when the

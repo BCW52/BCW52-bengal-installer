@@ -79,3 +79,4 @@ def run():
     dmcrypt_conf_path = dmcrypt_conf_path.lstrip('/')
 
     return write_dmcrypt_conf(partitions, root_mount_point, dmcrypt_conf_path)
+
